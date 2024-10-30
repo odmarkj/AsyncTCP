@@ -23,10 +23,14 @@
 #define ASYNCTCP_H_
 
 #include "IPAddress.h"
+#if LWIP_IPV6
 #include "IPv6Address.h"
+#endif
 #include <functional>
 #include "lwip/ip_addr.h"
+#if LWIP_IPV6
 #include "lwip/ip6_addr.h"
+#endif
 
 #ifndef LIBRETINY
 #include "sdkconfig.h"
